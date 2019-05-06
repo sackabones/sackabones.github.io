@@ -49,6 +49,32 @@ p{
 	background-color: #f79d96;
 }
 
+.check-toolbar{
+	text-align: center;
+}
+.check-toolbar input[type=checkbox]{
+	display: none;
+}
+
+.check-toolbar label{
+	display:inline-block;
+	background-color: #ddd;
+	padding: 24px 50px;
+	font-size: 32px;
+	border: 8px, solid #444;
+	border-radius: 14px;
+}
+
+.check-toolbar input[type="checkbox"]:checked + label{
+	background-color: #F44336;
+	border-color: #4c4;
+}
+
+.check-toolbar label:hover{
+	background-color: #f79d96;
+}
+
+
 .img{
 	text-align: center;
 }
