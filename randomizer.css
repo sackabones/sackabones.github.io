@@ -8,6 +8,10 @@ h2{
 	color: #f7060e;
 }
 
+h3{
+	text-align: center;
+}
+
 .center{
 	display: block;
 	margin-left: auto;
