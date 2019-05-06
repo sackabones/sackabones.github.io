@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Apex Legends Randomizer</title>
+		<link rel="stylesheet" type="text/css" href="randomizer.css" />
+		<link rel="shortcut icon" href="imgs/Favicon.ico" />
+</head>
+<body>
+
+	<script src="randomizerScript.js"></script>
+
+	<div class="background">
+		<img src="imgs/Apex_legends_cover.jpg" class="center" />
+		<h2>Apex Legends Randomizer</h2>
+		<p>
+			Choose how many legends would you like to random?<br />
+			<div class="radios">
+				1 Player: <input type="radio" name ="selection" id="onePlayer" value="1Player" /><br />
+				2 Players: <input type="radio" name ="selection" id="twoPlayer" value="2Player" /><br />
+				3 Players: <input type="radio" name ="selection" id="threePlayer" value="3Player" />
+			</div>
+		</p>
+	</div>
+	<p id="player1"/>
+	<p id="player2"/>
+	<p id="player3"/>
+	<p id="dropLoc"/>
+	<div class="wrapper">
+		<button class="button" onclick="randomize()">Randomize</button>
+	</div>
+
+</body>
+</html>
