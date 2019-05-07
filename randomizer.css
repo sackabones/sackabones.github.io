@@ -53,17 +53,20 @@ table{
 }
 
 .radio-toolbar label:hover{
-	background-color: #f79d96;
+	outline: 8px solid #f79d96;
+	outline-offset: -8px;
 }
 
 .check-toolbar{
 	text-align: center;
 }
+
 .check-toolbar input[type=checkbox]{
+	text-align: center;
 	display: none;
 }
 
-.check-toolbar label{
+.check-toolbar input[type="checkbox"] + label{
 	display:inline-block;
 	background-color: #ddd;
 	padding: 24px 50px;
@@ -78,7 +81,8 @@ table{
 }
 
 .check-toolbar label:hover{
-	background-color: #f79d96;
+	outline: 8px solid #f79d96;
+	outline-offset: -8px;
 }
 
 

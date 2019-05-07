@@ -15,7 +15,7 @@ function randomize(){
 	var randLeg1 = Math.floor(Math.random()*10);
 	var randLeg2 = Math.floor(Math.random()*10);
 	var randLeg3 = Math.floor(Math.random()*10);
-	var randLoc = Math.floor(Math.random()*20);
+	//var randLoc = Math.floor(Math.random()*20);
 	//make sure there are no duplicate legends randomed, "Player Choice" can be duped.
 	if(randLeg1 == randLeg2 && (legends[randLeg1].localeCompare("Player Choice") != 0)){
 		while(randLeg1 == randLeg2){
@@ -44,7 +44,8 @@ function randomize(){
 		if(document.getElementById("randomizeLoadout").checked){
 			playerOneOutput += randWeapons();
 		}
-		printInfo(randLoc);
+		printLeg();
+		checkAndPrintLoc();
 	}
 	if(document.getElementById("twoPlayer").checked){
 		playerOneOutput = "Player 1: "+legends[randLeg1];
@@ -54,7 +55,8 @@ function randomize(){
 			playerOneOutput += randWeapons();
 			playerTwoOutput += randWeapons();
 		}
-		printInfo(randLoc);
+		printLeg();
+		checkAndPrintLoc();
 	}
 	if(document.getElementById("threePlayer").checked){
 		playerOneOutput = "Player 1: "+legends[randLeg1];
@@ -65,7 +67,8 @@ function randomize(){
 			playerTwoOutput += randWeapons();
 			playerThreeOutput += randWeapons();
 		}
-		printInfo(randLoc);
+		checkAndPrintLoc();
+		printLeg();
 	}
 }
 
@@ -78,9 +81,15 @@ function randWeapons(){
 	return " | "+weapons[randWep1]+", "+weapons[randWep2];
 }
 
-function printInfo(randLoc){
+function printLeg(){
 	document.getElementById("player1").innerHTML = playerOneOutput;
 	document.getElementById("player2").innerHTML = playerTwoOutput;
 	document.getElementById("player3").innerHTML = playerThreeOutput;
-	document.getElementById("dropLoc").innerHTML = "Drop location: "+locations[randLoc];
+}
+
+function checkAndPrintLoc(){
+	var randLoc = Math.floor(Math.random()*20);
+	if(document.getElementById("randomizeLocation").checked){
+		document.getElementById("dropLoc").innerHTML = "Drop location: "+locations[randLoc];
+	}
 }
