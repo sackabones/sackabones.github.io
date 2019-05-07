@@ -92,4 +92,7 @@ function checkAndPrintLoc(){
 	if(document.getElementById("randomizeLocation").checked){
 		document.getElementById("dropLoc").innerHTML = "Drop location: "+locations[randLoc];
 	}
+	else{
+		document.getElementById("dropLoc").innerHTML = "";
+	}
 }
