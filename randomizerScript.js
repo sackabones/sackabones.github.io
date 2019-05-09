@@ -82,6 +82,9 @@ function randWeapons(){
 }
 
 function printLeg(){
+	//set the output div to visible
+	document.getElementById("outputDiv").style.display = "block";
+	//print the legends
 	document.getElementById("player1").innerHTML = playerOneOutput;
 	document.getElementById("player2").innerHTML = playerTwoOutput;
 	document.getElementById("player3").innerHTML = playerThreeOutput;

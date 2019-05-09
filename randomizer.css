@@ -31,6 +31,16 @@ table{
 	text-align: left;
 }
 
+.output{
+	border-style: solid;
+	border-color:#F44336;
+	background-color: #707070;
+	border-radius: 14px;
+	margin-left: 30%;
+	margin-right: 30%;
+	display: none;
+}
+
 .radio-toolbar{
 	text-align: center;
 }

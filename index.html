@@ -20,7 +20,7 @@
 				<label for="twoPlayer">2 Players</label>
 				<input type="radio" name ="selection" id="threePlayer" value="3Player">
 				<label for="threePlayer">3 Players</label>
-			</div><br />
+			</div>
 			<p>Choose if you want a random loadout and / or drop location.</p>
 			<div class="check-toolbar">
 				<input type="checkbox" name="randLoadout" id="randomizeLoadout" value="randLoadout">
@@ -30,10 +30,13 @@
 			</div>
 		</p>
 	</div>
-	<p id="player1"/>
-	<p id="player2"/>
-	<p id="player3"/>
-	<p id="dropLoc"/>
+	<div class="output" id="outputDiv">
+		<p id="player1"/>
+		<p id="player2"/>
+		<p id="player3"/>
+		<p id="dropLoc"/>
+	</div>
+	<br />
 	<div class="wrapper">
 		<button class="button" onclick="randomize()">Randomize</button>
 	</div>
@@ -65,7 +68,7 @@
 			<td>All attatchments, throwables, and items are free to use.</td>
 		</tr>
 	</table>
-	GLHF - Sackabones</h3>
+	Happy Hunting - Sackabones</h3>
 
 </body>
 </html>
