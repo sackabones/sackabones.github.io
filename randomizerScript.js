@@ -70,6 +70,11 @@ function randomize(){
 		checkAndPrintLoc();
 		printLeg();
 	}
+	//TODO add else, check the loadout or location is checked and print as indicated
+	else{
+		checkAndPrintLoc();
+		printLeg();
+	}
 }
 
 function randWeapons(){
