@@ -7,22 +7,32 @@
 	window.dataLayer = window.dataLayer || [];
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
-
 	gtag('config', 'UA-144946309-1');
 	</script>
-
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		$(document).ready(playerCheck(){
+			$('input:radio').click(playerCheck() {
+				$('input:radio').not(this).prop('checked', false);
+			});
+		});
+	</script>
+	
+	<script src="randomizerScriptRework.js"></script>
+	
 		<title>Apex Legends Randomizer</title>
 		<link rel="stylesheet" type="text/css" href="randomizer.css" />
 		<link rel="shortcut icon" href="imgs/Favicon.ico" />
+	
 </head>
 <body>
-
-	<script src="randomizerScript.js"></script>
-
+	
 	<div class="background">
 		<img src="imgs/Apex_legends_cover.jpg" class="center" />
 		<h2>Apex Legends Randomizer</h2>
-		<p>Choose how many legends would you like to random?</p><br />
+		<p>Choose how many Players you would like to random?</p><br />
 			<div class="radio-toolbar">
 				<input type="radio" name ="selection" id="onePlayer" value="1Player">
 				<label for="onePlayer">1 Player</label>
@@ -31,8 +41,11 @@
 				<input type="radio" name ="selection" id="threePlayer" value="3Player">
 				<label for="threePlayer">3 Players</label>
 			</div>
-			<p>Choose if you want a random loadout and / or drop location.</p>
+			<p>Choose which items you want to random, Legend(s) / Loadout / Drop Location.</p>
 			<div class="check-toolbar">
+				<input type="checkbox" name="randLegend" id="randomizeLegend" value="randLegend">
+				<label for="randomizeLegend">Random Legends</label>
+				<br><br>
 				<input type="checkbox" name="randLoadout" id="randomizeLoadout" value="randLoadout">
 				<label for="randomizeLoadout">Random Loadout</label>
 				<input type="checkbox" name="randLocation" id="randomizeLocation" value="randLocation">
