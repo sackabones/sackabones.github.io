@@ -11,6 +11,7 @@ var playerThreeOutput = "";
 var randLeg1;
 var randLeg2;
 var randLeg3;
+var lastChecked;
 
 function randomize(){
 	//check the number of players checked
@@ -27,6 +28,7 @@ function randomize(){
 	}
 	switch(numberOfPlayers){
 		case 1:
+			alert("case 1");
 			//one player selected
 			//check what fields are checked [legends][loadout] and random them
 			if(document.getElementById("randomizeLegend").checked){
@@ -106,72 +108,6 @@ function randomize(){
 	}
 	printLeg();
 	checkAndPrintLoc();
-	
-
-	/*//random the players and drop location
-	randLeg1 = Math.floor(Math.random()*legends.length);
-	randLeg2 = Math.floor(Math.random()*legends.length);
-	randLeg3 = Math.floor(Math.random()*legends.length);
-	//var randLoc = Math.floor(Math.random()*20);
-	//make sure there are no duplicate legends randomed, "Player Choice" can be duped.
-	if(randLeg1 == randLeg2 && (legends[randLeg1].localeCompare("Player Choice") != 0)){
-		while(randLeg1 == randLeg2){
-			randLeg2 = Math.floor(Math.random()*legends.length);
-		}
-	}
-	if(randLeg1 == randLeg3 && (legends[randLeg1].localeCompare("Player Choice") != 0)){
-		while(randLeg1 == randLeg3){
-			randLeg3 = Math.floor(Math.random()*legends.length);
-		}
-	}
-	if(randLeg2 == randLeg3 && (legends[randLeg2].localeCompare("Player Choice") != 0)){
-		while(randLeg2 == randLeg3){
-			randLeg3 = Math.floor(Math.random()*legends.length);
-		}
-	}
-	//make sure that each player does not have duplicate weapons
-
-
-
-	//check how many players to random and output
-	if(document.getElementById("onePlayer").checked){
-		playerOneOutput = "Player 1: "+legends[randLeg1];
-		playerTwoOutput = "";
-		playerThreeOutput = "";
-		if(document.getElementById("randomizeLoadout").checked){
-			playerOneOutput += randWeapons();
-		}
-		printLeg();
-		checkAndPrintLoc();
-	}
-	if(document.getElementById("twoPlayer").checked){
-		playerOneOutput = "Player 1: "+legends[randLeg1];
-		playerTwoOutput = "Player 2: "+legends[randLeg2];
-		playerThreeOutput = "";
-		if(document.getElementById("randomizeLoadout").checked){
-			playerOneOutput += randWeapons();
-			playerTwoOutput += randWeapons();
-		}
-		printLeg();
-		checkAndPrintLoc();
-	}
-	if(document.getElementById("threePlayer").checked){
-		playerOneOutput = "Player 1: "+legends[randLeg1];
-		playerTwoOutput = "Player 2: "+legends[randLeg2];
-		playerThreeOutput = "Player 3: "+legends[randLeg3];
-		if(document.getElementById("randomizeLoadout").checked){
-			playerOneOutput += randWeapons();
-			playerTwoOutput += randWeapons();
-			playerThreeOutput += randWeapons();
-		}
-		checkAndPrintLoc();
-		printLeg();
-	}
-	//TODO add else, check the loadout or location is checked and print as indicated
-	else{
-		checkAndPrintLoc();
-		printLeg();
-	}*/
 }
 
 function randWeapons(){
@@ -221,5 +157,43 @@ function checkAndPrintLegs(){
 		while(randLeg2 == randLeg3){
 			randLeg3 = Math.floor(Math.random()*legends.length);
 		}
+	}
+}
+
+function legCheck(){
+	//check if the same radio is clicked, if so, unclick it
+	if(document.getElementById("onePlayer").checked){
+		//do something then change lastChecked
+		//alert("onePlayer checked");
+		if(document.getElementById("onePlayer").id === lastChecked){
+			document.getElementById("onePlayer").checked = false;
+			lastChecked = "";
+		}
+		else{
+			lastChecked = document.getElementById("onePlayer").id;
+		}
+		//alert(lastChecked);
+	}
+	if(document.getElementById("twoPlayer").checked){
+		//alert("twoPlayer checked");
+		if(document.getElementById("twoPlayer").id === lastChecked){
+			document.getElementById("twoPlayer").checked = false;
+			lastChecked = "";
+		}
+		else{
+			lastChecked = document.getElementById("twoPlayer").id;
+		}
+		//alert(lastChecked);
+	}
+	if(document.getElementById("threePlayer").checked){
+		//alert("threePlayer checked");
+		if(document.getElementById("threePlayer").id === lastChecked){
+			document.getElementById("threePlayer").checked = false;
+			lastChecked = "";
+		}
+		else{
+			lastChecked = document.getElementById("threePlayer").id;
+		}
+		//alert(lastChecked);
 	}
 }

@@ -12,13 +12,7 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
-	<script>
-		$(document).ready(playerCheck(){
-			$('input:radio').click(playerCheck() {
-				$('input:radio').not(this).prop('checked', false);
-			});
-		});
-	</script>
+	
 	
 	<script src="randomizerScriptRework.js"></script>
 	
@@ -34,11 +28,11 @@
 		<h2>Apex Legends Randomizer</h2>
 		<p>Choose how many Players you would like to random?</p><br />
 			<div class="radio-toolbar">
-				<input type="radio" name ="selection" id="onePlayer" value="1Player">
+				<input type="radio" name ="selection" id="onePlayer" value="1Player" onclick="legCheck()">
 				<label for="onePlayer">1 Player</label>
-				<input type="radio" name ="selection" id="twoPlayer" value="2Player">
+				<input type="radio" name ="selection" id="twoPlayer" value="2Player" onclick="legCheck()">
 				<label for="twoPlayer">2 Players</label>
-				<input type="radio" name ="selection" id="threePlayer" value="3Player">
+				<input type="radio" name ="selection" id="threePlayer" value="3Player" onclick="legCheck()">
 				<label for="threePlayer">3 Players</label>
 			</div>
 			<p>Choose which items you want to random, Legend(s) / Loadout / Drop Location.</p>
