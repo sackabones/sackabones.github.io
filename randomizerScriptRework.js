@@ -16,9 +16,11 @@ var lastChecked;
 function randomize(){
 	//check the number of players checked
 	var numberOfPlayers = 0;
+	playerOneOutput = "";
+	playerTwoOutput = "";
+	playerThreeOutput = "";
 	if(document.getElementById("onePlayer").checked){
-			numberOfPlayers = 1;
-			
+			numberOfPlayers = 1;	
 	}
 	if(document.getElementById("twoPlayer").checked){
 			numberOfPlayers = 2;
@@ -105,6 +107,7 @@ function randomize(){
 			playerTwoOutput = "";
 			playerThreeOutput = "";
 	}
+	numberOfPlayers = 0;
 	printLeg();
 	checkAndPrintLoc();
 }
