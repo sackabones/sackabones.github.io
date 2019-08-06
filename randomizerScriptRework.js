@@ -28,7 +28,6 @@ function randomize(){
 	}
 	switch(numberOfPlayers){
 		case 1:
-			alert("case 1");
 			//one player selected
 			//check what fields are checked [legends][loadout] and random them
 			if(document.getElementById("randomizeLegend").checked){
@@ -164,7 +163,6 @@ function legCheck(){
 	//check if the same radio is clicked, if so, unclick it
 	if(document.getElementById("onePlayer").checked){
 		//do something then change lastChecked
-		//alert("onePlayer checked");
 		if(document.getElementById("onePlayer").id === lastChecked){
 			document.getElementById("onePlayer").checked = false;
 			lastChecked = "";
@@ -172,10 +170,8 @@ function legCheck(){
 		else{
 			lastChecked = document.getElementById("onePlayer").id;
 		}
-		//alert(lastChecked);
 	}
 	if(document.getElementById("twoPlayer").checked){
-		//alert("twoPlayer checked");
 		if(document.getElementById("twoPlayer").id === lastChecked){
 			document.getElementById("twoPlayer").checked = false;
 			lastChecked = "";
@@ -183,10 +179,8 @@ function legCheck(){
 		else{
 			lastChecked = document.getElementById("twoPlayer").id;
 		}
-		//alert(lastChecked);
 	}
 	if(document.getElementById("threePlayer").checked){
-		//alert("threePlayer checked");
 		if(document.getElementById("threePlayer").id === lastChecked){
 			document.getElementById("threePlayer").checked = false;
 			lastChecked = "";
@@ -194,6 +188,5 @@ function legCheck(){
 		else{
 			lastChecked = document.getElementById("threePlayer").id;
 		}
-		//alert(lastChecked);
 	}
 }
