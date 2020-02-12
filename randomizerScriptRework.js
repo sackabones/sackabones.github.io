@@ -1,9 +1,9 @@
 //array to hold all possible legends
-var legends = new Array("Player Choice", "Bloodhound", "Gibraltar", "Lifeline", "Pathfinder", "Wraith", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson");
+var legends = new Array("Player Choice", "Bloodhound", "Gibraltar", "Lifeline", "Pathfinder", "Wraith", "Bangalore", "Caustic", "Mirage", "Octane", "Wattson", "Crypto", "Revenant");
 //array to hold major drop location
 var locations = new Array("Slum Lakes", "Artillery", "Relay", "Containment", "The Pit", "Runoff", "Bunker", "Airbase", "Farm", "Wetlands", "Swamps", "Hydro Dam", "The Cage", "Repulsor", "Water Treatment", "Market", "Skull Town", "Thunderdome", "Drop Ship", "Nesting Grounds", "Player Choice", "Gauntlet");
 //array to hold all the common weapons
-var weapons = new Array("Longbow", "G7 Scout", "Triple Take", "Hemlok", "R-301", "Flatline", "Havoc", "Spitfire", "Devotion", "R-99", "Prowler", "Alternator", "EVA-8", "Peacekeeper", "Mozambique", "Wingman", "RE-45", "P2020");
+var weapons = new Array("Longbow", "Sentinel", "G7 Scout", "Triple Take", "Hemlok", "R-301", "Flatline", "Havoc", "Spitfire", "L-Star", "R-99", "Prowler", "Alternator", "EVA-8", "Peacekeeper", "Mozambique", "Wingman", "RE-45", "P2020");
 //string to hold output message
 var playerOneOutput = "";
 var playerTwoOutput = "";
